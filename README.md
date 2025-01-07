@@ -46,26 +46,19 @@ File structure for `.env`:
 ```
 [
     {
-        "id": 1,
-        "name": "John",
-        "lastname": "Doe",
-        "email": "john.doe@example.com"
+        "id": 5,
+        "name": "Leila Aylen",
+        "lastname": "Salguero",
+        "gender": "Female",
+        "birthdate": "200.-04-25",
+        "email": "leiisalguero@gmail.com",
+        "phone": "1158079279",
+        "maritalStatus": "Single",
+        "createdAt": "2025-01-07T15:48:27.000Z",
+        "updatedAt": "2025-01-07T16:30:35.000Z"
     },
     ...
 ]
-```
-
-⚡️ GET /api/people/:id
-Retrieves the details of a person by their id.
-
-Response Example:
-```
-{
-    "id": 1,
-    "name": "John",
-    "lastname": "Doe",
-    "email": "john.doe@example.com"
-}
 ```
 
 ⚡️ POST /api/people
@@ -74,21 +67,30 @@ Creates a new person.
 Request Body:
 ```
 {
-    "name": "Jane",
-    "lastname": "Doe",
-    "email": "jane.doe@example.com"
-}
+        "name": "Leila Aylen",
+        "lastname": "Salguero",
+        "gender": "Female",
+        "birthdate": "200.-04-25",
+        "email": "leiisalguero@gmail.com",
+        "phone": "1158079279",
+        "maritalStatus": "Single"
+    },
 ```
 
 ⚡️ PUT /api/people/:id
 Updates a person by id.
+You can send all fields or send only the one you want to update.
 
 Request Body:
 ```
 {
-    "name": "Jane",
-    "lastname": "Smith",
-    "email": "jane.smith@example.com"
+    "name": "Leila Aylen",
+     "lastname": "Salguero",
+     "gender": "Female",
+     "birthdate": "200.-04-25",
+     "email": "leiisalguero@gmail.com",
+     "phone": "1158079279",
+     "maritalStatus": "Single"
 }
 ```
 
