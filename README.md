@@ -53,36 +53,44 @@ File structure for `.env`:
     },
     ...
 ]
+```
 
 ⚡️ GET /api/people/:id
 Retrieves the details of a person by their id.
+
 Response Example:
+```
 {
     "id": 1,
     "name": "John",
     "lastname": "Doe",
     "email": "john.doe@example.com"
 }
+```
 
 ⚡️ POST /api/people
 Creates a new person.
-Request Body:
 
+Request Body:
+```
 {
     "name": "Jane",
     "lastname": "Doe",
     "email": "jane.doe@example.com"
 }
+```
 
 ⚡️ PUT /api/people/:id
 Updates a person by id.
-Request Body:
 
+Request Body:
+```
 {
     "name": "Jane",
     "lastname": "Smith",
     "email": "jane.smith@example.com"
 }
+```
 
 ⚡️ DELETE /api/people/:id
 Deletes a person by their id.
