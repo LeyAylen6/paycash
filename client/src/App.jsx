@@ -31,13 +31,25 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (form.id) {
-      setPeople(people.map((person) => person.id === form.id ? { ...form } : person));
+      updatePerson();
     } else {
-      setPeople([{ ...form, id: Date.now() }, ...people]);
+      addPerson();
     }
 
     setForm(defaultForm);
+  };
+
+  const updatePerson = () => {
+    setPeople(people.map((person) =>
+      person.id === form.id ? { ...form } : person
+    ));
+  };
+
+  const addPerson = () => {
+    const newPerson = { ...form, id: Date.now() };
+    setPeople([newPerson, ...people]);
   };
 
   const handleEdit = (id) => {
@@ -47,12 +59,15 @@ const App = () => {
 
   const handleDelete = (id) => {
     const person = people.find((person) => person.id === id);
+    const peopleFiltered = people.filter((people) => people.id !== id);
+
+    setPeople(peopleFiltered);
     deletePeople(person.id)
   };
 
   return (
     <div className={styles.container}>
-      <h1>People Catalog</h1>
+      <h1>- People Catalog -</h1>
 
       <div className={styles.tableFormContainer}>
         <Table people={people} handleEdit={handleEdit} handleDelete={handleDelete} />

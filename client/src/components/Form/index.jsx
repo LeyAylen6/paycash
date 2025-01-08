@@ -10,6 +10,19 @@ const Form = ({ form, handleChange, handleSubmit }) => {
             : createPeople(form)
     }
 
+
+    const thereAreEmptyValues = () => {
+        return (
+            !form.name ||
+            !form.lastname ||
+            !form.gender ||
+            !form.birthdate ||
+            !form.email ||
+            !form.phone ||
+            !form.maritalStatus
+        )
+    }
+
     return (
         <form className={styles.form} onSubmit={handleSubmit}>
             {formFields.map((field, index) => {
@@ -43,7 +56,7 @@ const Form = ({ form, handleChange, handleSubmit }) => {
                     );
                 }
             })}
-            <button onClick={handleClick} type="submit">
+            <button onClick={handleClick} type="submit" >
                 {form.id ? "Update Person" : "Add Person"}
             </button>
         </form>
