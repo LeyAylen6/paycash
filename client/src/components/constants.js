@@ -44,8 +44,10 @@ export const formFields = [
         name: "maritalStatus",
         options: [
             { value: "", label: "Marital Status" },
-            { value: "Single", label: "Single" },
-            { value: "Married", label: "Married" },
+            { value: "single", label: "Single" },
+            { value: "married", label: "Married" },
+            { value: "divorced", label: "Divorced" },
+            { value: "widowed", label: "Widowed" },
         ],
         required: true,
     },
