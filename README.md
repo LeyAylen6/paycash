@@ -78,7 +78,7 @@ File structure for `.env`:
 
 Add a screenshot of your application here for better visualization. For example:
 
-![Interface Screenshot](path-to-screenshot.png)
+![Interface Screenshot]([path-to-screenshot.png](https://github.com/LeyAylen6/paycash/blob/main/client/assets/paycash-people.jpeg?raw=true))
 
 ---
 
