@@ -1,16 +1,26 @@
 # 💸 Paycash - People 💸
 
+## 🌐 Live Deployments
+
+- **Frontend Deployment**: [https://main.d32jy7c947539s.amplifyapp.com/](https://main.d32jy7c947539s.amplifyapp.com/)
+- **Backend Deployment**: The backend is deployed using Docker on Render. Please refer to the instructions below for local setup.
+- **MySQL Database Deployment**: The database is deployed using AWS RDS.
+
+---
+
 ## 📌 About this project
 
 This project implements a RESTful API for managing a people catalog, using CQRS and Mediator patterns. It allows performing CRUD operations on a set of people, including create, read, update, and delete.
 
 - __Back End__: Node.js, Express, Sequelize
+- __Front End__: React.js
 - __Database__: MySQL
 
 ### 📌 How to get started?
 
-This project requires a `.env` file in the root directory for configuring your database and server.
+This project requires a `.env` backend and frontend file in the root directory for configuring your database and server.
 
+__Backend:__
 File structure for `.env`:
 - `DB_HOST='localhost'`
 - `DB_USER='username'`
@@ -24,18 +34,53 @@ File structure for `.env`:
 - `DB_HOST` is the host where your MySQL database is running.
 - `DB_NAME` is the name of your database.
 
+__Frontend:__
+File structure for `.env`:
+- `VITE_API_URL='localhost'`
+
 📍 To set up and run the project:
 
 1. In the root directory:
    - Create a `.env` file as explained above.
 
-2. In the Server folder:
+2. In the `/api` folder:
    - Run `npm install`
    - Run `npm start`
 
-3. In the Client folder (optional if you want to set up a front-end):
+3. In the `/client` folder (optional if you want to set up a front-end):
    - Run `npm install`
    - Run `npm start`
+
+---
+
+## 🐳 Docker Setup (Optional)
+
+### Build and Run Locally:
+
+1. Navigate to the `/api` directory:
+   ```bash
+   cd paycash-people/api
+   ```
+
+2. Build the Docker image:
+   ```bash
+   docker build -t api .
+   ```
+
+3. Run the Docker container:
+   ```bash
+   docker run -p 3000:3000 --env-file .env api
+   ```
+
+---
+
+## 📸 Interface Screenshot
+
+Add a screenshot of your application here for better visualization. For example:
+
+![Interface Screenshot](path-to-screenshot.png)
+
+---
 
 ## 📌 API Routes
 
@@ -96,4 +141,3 @@ Request Body:
 
 ⚡️ DELETE /api/people/:id
 Deletes a person by their id.
-
