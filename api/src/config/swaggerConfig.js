@@ -83,7 +83,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Internal server error',
+                                    error: 'Internal server error',
                                 },
                             },
                         },
@@ -122,7 +122,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Invalid data',
+                                    error: 'Invalid data',
                                 },
                             },
                         },
@@ -132,7 +132,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Internal server error',
+                                    error: 'Internal server error',
                                 },
                             },
                         },
@@ -165,7 +165,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'ID parameter is required',
+                                    error: 'ID parameter is required',
                                 },
                             },
                         },
@@ -175,7 +175,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Person not found',
+                                    error: 'Person not found',
                                 },
                             },
                         },
@@ -185,7 +185,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Internal server error',
+                                    error: 'Internal server error',
                                 },
                             },
                         },
@@ -216,7 +216,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'ID parameter is required',
+                                    error: 'ID parameter is required',
                                 },
                             },
                         },
@@ -226,7 +226,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Person not found',
+                                    error: 'Person not found',
                                 },
                             },
                         },
@@ -236,7 +236,7 @@ const swaggerDocs = {
                         content: {
                             'application/json': {
                                 example: {
-                                    message: 'Internal server error',
+                                    error: 'Internal server error',
                                 },
                             },
                         },

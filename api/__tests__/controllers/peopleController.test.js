@@ -46,12 +46,12 @@ describe('People Controller Tests', () => {
         });
 
         it('should handle errors and return a 500 status', async () => {
-            mediator.send.mockRejectedValue(new Error('Test error'));
+            mediator.send.mockRejectedValue(new Error('Internal error'));
 
             await getAllPeople(req, res);
 
             expect(res.status).toHaveBeenCalledWith(500);
-            expect(res.json).toHaveBeenCalledWith({ error: 'Test error' });
+            expect(res.json).toHaveBeenCalledWith({ error: 'Internal error' });
         });
     });
 
@@ -126,7 +126,7 @@ describe('People Controller Tests', () => {
 
             expect(mediator.send).toHaveBeenCalledWith(createPeopleCommand(req.body))
             expect(res.status).toHaveBeenCalledWith(500);
-            expect(res.body).toEqual({ error: 'Internal error' });
+            expect(res.json).toHaveBeenCalledWith({ error: 'Internal error' });
         });
     });
 
@@ -181,6 +181,7 @@ describe('People Controller Tests', () => {
 
             expect(mediator.send).toHaveBeenCalledWith(deletePeopleByIdCommand(req.params.id))
             expect(res.status).toHaveBeenCalledWith(500);
+            expect(res.json).toHaveBeenCalledWith({ error: 'Internal error' });
         });
     });
 
@@ -268,6 +269,7 @@ describe('People Controller Tests', () => {
             command = updatePeopleByIdCommand(req.params.id, newValues)
             expect(mediator.send).toHaveBeenCalledWith(command)
             expect(res.status).toHaveBeenCalledWith(500);
+            expect(res.json).toHaveBeenCalledWith({ error: 'Internal error' });
         });
     });
 

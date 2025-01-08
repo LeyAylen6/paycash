@@ -33,10 +33,12 @@ const createPeople = async (req, res) => {
         res.status(201).send();
     } catch (error) {
         if (error.message == 'Invalid data' || error.message == 'Failed to create People') {
-            res.status(400).json({ error: error.message });
+            res.status(400);
         } else {
-            res.status(500).json({ error: error.message });
+            res.status(500);
         }
+
+        res.json({ error: error.message });
     }
 };
 
@@ -54,14 +56,16 @@ const deletePeopleById = async (req, res) => {
 
     } catch (error) {
         if (error.message == "Id param is required") {
-            res.status(400).send({ message: error.message });
+            res.status(400);
 
         } else if (error.message == "People not found") {
-            res.status(404).send({ message: error.message });
+            res.status(404);
 
         } else {
-            res.status(500).send({ message: error.message });
+            res.status(500);
         }
+
+        res.json({ error: error.message });
     }
 }
 
@@ -79,13 +83,15 @@ const updatePeopleById = async (req, res) => {
         res.status(200).send();
     } catch (error) {
         if (error.message == "Id param is required") {
-            res.status(400).send({ message: error.message });
+            res.status(400);
 
         } else if (error.message == "People not found") {
-            res.status(404).send({ message: error.message });
+            res.status(404);
         } else {
-            res.status(500).send({ message: error.message });
+            res.status(500);
         }
+
+        res.json({ error: error.message });
     }
 }
 
