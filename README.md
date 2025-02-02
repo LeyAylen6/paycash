@@ -2,7 +2,7 @@
 
 ## 🌐 Live Deployments
 
-- **Frontend Deployment**: [https://main.d32jy7c947539s.amplifyapp.com/](https://main.d32jy7c947539s.amplifyapp.com/)
+- **Frontend Deployment**: [https://paycash-seven.vercel.app](https://paycash-seven.vercel.app)
 - **Backend Deployment**: The backend is deployed using Docker on Render. Please refer to the instructions below for local setup.
 - **MySQL Database Deployment**: The database is deployed using AWS RDS.
 
